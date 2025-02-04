@@ -56,7 +56,7 @@ jobs:
         if: matrix.os == 'windows-latest'
       
       - name: Upload Server Artifacts
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@latest
         with:
           name: iib_app_cli_${{ runner.os }}
           path: |
@@ -64,7 +64,7 @@ jobs:
             out/iib_app_cli-${{ env.VERSION }}-${{ runner.os }}.exe
 
       - name: Upload Server Artifacts
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@latest
         with:
           name: iib_api_server-${{ env.VERSION }}-${{ runner.os }}
           path: |
@@ -107,7 +107,7 @@ jobs:
       
       
       - name: Upload Artifacts
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@latest
         with:
           name: bundle-${{ env.VERSION }}-${{ runner.os }}
           path: |
@@ -183,7 +183,7 @@ jobs:
          mv "Infinite Image Browsing_${{ env.VERSION }}_x64-setup.exe" "Infinite Image Browsing_${{ env.VERSION }}_x64-setup-pyinstaller.exe"
       
       - name: Upload Artifacts
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@latest
         with:
           name: bundle-${{ env.VERSION }}-${{ runner.os }}
           path: |
