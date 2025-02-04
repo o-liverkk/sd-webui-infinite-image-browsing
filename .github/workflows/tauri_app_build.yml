@@ -205,22 +205,22 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - uses: actions/download-artifact@v3
+      - uses: actions/download-artifact@v4
         with:
           name: bundle-${{ env.VERSION }}-Windows
           path: artifacts
 
-      - uses: actions/download-artifact@v3
+      - uses: actions/download-artifact@v4
         with:
           name: bundle-${{ env.VERSION }}-Linux
           path: artifacts
       
-      - uses: actions/download-artifact@v3
+      - uses: actions/download-artifact@v4
         with:
           name: iib_app_cli_Windows
           path: artifacts
 
-      - uses: actions/download-artifact@v3
+      - uses: actions/download-artifact@v4
         with:
           name: iib_app_cli_Linux
           path: artifacts
